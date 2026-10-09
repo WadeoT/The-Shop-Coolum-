@@ -1,0 +1,25 @@
+---
+import Photo from './Photo.astro';
+import Icon from './Icon.astro';
+import Sun from './Sun.astro';
+import { business } from '../data/site';
+---
+<section class="coffee-story" data-film-story data-film-src={business.film.src} aria-labelledby="coffee-heading">
+  <div class="coffee-sticky">
+    <div class="coffee-visual">
+      <Photo name="coffee" alt="Illustrative still life of a flat white in an olive ceramic cup, on sunlit timber" class="coffee-photo" parallax />
+      <video class="scroll-film" muted playsinline preload="none" poster={business.film.src ? business.film.poster : undefined} aria-hidden="true" tabindex="-1"></video>
+      <span class="image-corner-note">A MOMENT TO YOURSELF.</span>
+      <div class="film-progress" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="coffee-copy">
+      <p class="eyebrow">01 / THE MORNING RITUAL</p>
+      <svg class="steam" width="68" height="75" viewBox="0 0 68 75" fill="none" aria-hidden="true"><path pathLength="1" d="M20 70c-18-24 26-31 8-54M40 63c-18-24 28-31 8-59" stroke="currentColor" stroke-width="1.5"/></svg>
+      <h2 id="coffee-heading">Good mornings<br/>start <em>here.</em></h2>
+      <p class="body-copy">That first sip. A familiar face. A little pause before the day begins.</p>
+      <p>Coffee, something fresh, and a good reason to slow down for a moment. That’s our kind of morning.</p>
+      <a class="text-link" href="/coffee-food/">Coffee + food <Icon name="arrow" /></a>
+      <div class="coffee-footnote"><Sun/><span>TAKE A MOMENT. MAKE IT A GOOD ONE.</span></div>
+    </div>
+  </div>
+</section>

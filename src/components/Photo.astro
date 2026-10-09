@@ -1,0 +1,6 @@
+---
+const { name, alt, class: className = '', eager = false, sizes = '(max-width: 700px) 100vw, 50vw', reveal = false, parallax = false } = Astro.props;
+---
+<div class:list={['photo', className]} data-reveal={reveal || undefined} data-parallax={parallax || undefined}>
+  <img src={`/images/${name}-1280.webp`} srcset={`/images/${name}-640.webp 640w, /images/${name}-1280.webp 1280w, /images/${name}-1920.webp 1920w`} sizes={sizes} width="1280" height="1280" alt={alt} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding="async" />
+</div>

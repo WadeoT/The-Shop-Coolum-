@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Photo from '../components/Photo.astro';
+import Sun from '../components/Sun.astro';
+import Thread from '../components/Thread.astro';
+import Icon from '../components/Icon.astro';
+import VisitCTA from '../components/VisitCTA.astro';
+---
+<Layout title="Local Matters" description="Local knowledge, local products, local people. Discover the independent spirit of The Shop @ Coolum.">
+  <section class="local-page-hero section-pad"><p class="eyebrow">INDEPENDENT SPIRIT. COOLUM HEART.</p><h1>Local<br/><em>matters.</em></h1><Sun/><div class="local-hero-bottom"><p>Good things feel even better<br/>when they’re close to home.</p><span class="eyebrow">COOLUM BEACH · QUEENSLAND</span></div><Thread/></section>
+  <section class="editorial-split section-pad"><Photo name="pantry" alt="Illustrative bread and seasonal produce arranged on a timber counter" reveal/><div><p class="eyebrow">A LITTLE CLOSER TO HOME</p><h2>Good finds.<br/><em>Independent minds.</em></h2><p class="lead">A neighbourhood shop with a curious eye.</p><p>Discover local favourites, Australian products and the everyday things that earn a place in your pantry. We like the small discoveries as much as you do.</p><p>Looking for something in particular? Ask us about what’s on the shelves and where it comes from.</p><a class="text-link" href="/groceries/">Explore the foodstore <Icon/></a></div></section>
+  <section class="statement-section section-pad"><p class="eyebrow">IT’S THE SMALL THINGS</p><h2>A familiar face.<br/>A conversation at the counter.<br/><em>A place in your day.</em></h2><p>That’s what local means to us.</p></section>
+  <VisitCTA/>
+</Layout>

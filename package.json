@@ -1,0 +1,24 @@
+{
+  "name": "the-shop-coolum",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --host 0.0.0.0",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
+    "test": "node scripts/smoke.cjs",
+    "test:motion": "node scripts/test-film.cjs",
+    "test:performance": "node scripts/performance.cjs"
+  },
+  "dependencies": {
+    "astro": "^5.13.0",
+    "@fontsource/cormorant-garamond": "^5.2.6",
+    "@fontsource/dm-sans": "^5.2.6"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "playwright": "^1.55.0",
+    "sharp": "^0.34.3"
+  }
+}

@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Icon from '../components/Icon.astro';
+import VisitCTA from '../components/VisitCTA.astro';
+---
+<Layout title="Coffee + Food" description="A morning coffee, fresh bread, pastries and something for the road. Discover coffee and food at The Shop @ Coolum.">
+  <PageHero eyebrow="COFFEE + FOOD" first="A good day" italic="starts small." text="The first coffee. A pastry worth pausing for. Something fresh to take with you. Make a little room for the good things." image="hero" alt="Illustrative coffee and croissant on a sunlit timber table" link="#coffee" linkLabel="Find your morning ritual"/>
+  <section class="editorial-split section-pad" id="coffee"><Photo name="coffee" alt="Illustrative flat white in a handmade olive cup" reveal/><div><p class="eyebrow">THE FIRST SIP</p><h2>Your morning,<br/><em>made better.</em></h2><p class="lead">Coffee and a moment to yourself.</p><p>On your way to the beach, on the way to work, or with no particular place to be. Stop in for your usual, and stay for a little while if the day allows.</p><a class="text-link" href="/visit/">Make us part of your morning <Icon/></a></div></section>
+  <section class="food-banner" id="fresh-food"><Photo name="bread" alt="Illustrative fresh croissants and rustic sourdough bread" sizes="100vw" parallax/><div><p class="eyebrow">FRESH FOOD & LITTLE TREATS</p><h2>Something good<br/><em>for the road.</em></h2></div></section>
+  <section class="food-notes section-pad"><div><span class="eyebrow">01 / BREAD & PASTRIES</span><h3>The simple pleasures.</h3><p>Fresh bread, flaky pastries and a little something to go with your coffee. See what’s in the shop today.</p></div><div><span class="eyebrow">02 / PICK UP & GO</span><h3>Take the day outside.</h3><p>Ready-to-go food for a lunch break, a beach day, or wherever you’re headed next.</p></div><div><span class="eyebrow">03 / ASK US IN STORE</span><h3>A fresh daily discovery.</h3><p>Our selection can change. For today’s food options, ingredients or dietary questions, have a chat with the team.</p></div></section>
+  <VisitCTA/>
+</Layout>

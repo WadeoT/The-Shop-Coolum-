@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import Sun from '../components/Sun.astro';
+import Thread from '../components/Thread.astro';
+import VisitCTA from '../components/VisitCTA.astro';
+---
+<Layout title="Our Story" description="A foodstore, a coffee spot and a little corner of Coolum. Get to know The Shop @ Coolum.">
+  <PageHero eyebrow="A LITTLE ABOUT US" first="A little shop." italic="A lot of heart." text="A foodstore, a coffee spot, and a place to stop for a chat. The Shop is a little corner of everyday life in Coolum Beach." image="hero" alt="Illustrative coffee and pastry in warm morning light" link="#our-place" linkLabel="This is our kind of place"/>
+  <section id="our-place" class="story-section section-pad"><div><Sun/><p class="eyebrow">GOOD THINGS, CLOSE TO HOME.</p></div><div><h2>More than what’s<br/><em>on the shelves.</em></h2><p class="lead">Some places become part of your day.</p><p>The stop for your morning coffee. The place you duck into for bread. The little shop where you find something for dinner, or something just for you.</p><p>That’s the idea behind The Shop @ Coolum: good coffee, fresh food, groceries and little discoveries, together in one welcoming place.</p><p>Opposite Coolum Surf Club, with the beach a little way away, we’re easy to make part of your day. Whether you’re around the corner or just passing through, come on in.</p><Thread/></div></section>
+  <section class="story-values section-pad"><p class="eyebrow">OUR KIND OF EVERYDAY</p><div><h3>Keep it good.</h3><p>Coffee, food and pantry favourites that make the everyday feel a little more considered.</p></div><div><h3>Keep it human.</h3><p>A friendly hello and time for a chat. It’s the little things that make a local feel like your local.</p></div><div><h3>Keep it close.</h3><p>Right here in Coolum. For the morning regulars, the weekend wanderers, and everyone in between.</p></div></section>
+  <VisitCTA/>
+</Layout>

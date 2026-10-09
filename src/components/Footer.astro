@@ -1,0 +1,9 @@
+---
+import { business, navigation } from '../data/site';
+import Icon from './Icon.astro';
+---
+<footer class="site-footer">
+  <div class="footer-top"><a class="brand" href="/" aria-label="The Shop at Coolum, home"><span class="brand-main">the shop.</span><span class="brand-place">@ COOLUM</span></a><p>Good things,<br/><em>close to home.</em></p><a class="back-top text-link" href="#top">Back to top <Icon name="diagonal"/></a></div>
+  <div class="footer-middle"><p>Your foodstore, coffee spot<br/>and little corner of Coolum.</p><nav aria-label="Footer navigation">{navigation.map(link => <a href={link.href}>{link.label}</a>)}</nav><div class="footer-contact"><a href={`tel:${business.telephone}`}>{business.phone}</a><a href={business.directions} target="_blank" rel="noopener noreferrer">{business.street}<br/>{business.locality} <Icon name="diagonal"/></a>{business.socials.map(link=><a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>)}</div></div>
+  <div class="footer-bottom"><span>© {new Date().getFullYear()} The Shop @ Coolum</span><span>Made for slow mornings & everyday discoveries.</span><a href="/image-notes/">About the imagery</a></div>
+</footer>

@@ -1,0 +1,10 @@
+---
+import { business } from '../data/site';
+import Icon from './Icon.astro';
+import Sun from './Sun.astro';
+import Thread from './Thread.astro';
+---
+<section class="visit-section section-pad" aria-labelledby="visit-heading">
+  <div class="visit-art" aria-hidden="true"><span class="eyebrow">A LITTLE SUNSHINE. A LITTLE SHOP.</span><Sun/><span class="visit-art-type">See you<br/><em>in Coolum.</em></span><div class="coastal-lines"><i></i><i></i><i></i></div><span class="eyebrow">QUEENSLAND, AUSTRALIA</span></div>
+  <div class="visit-copy"><p class="eyebrow"><Icon name="pin"/> YOUR LOCAL, BY THE COAST</p><h2 id="visit-heading">Come on <em>in.</em></h2><p class="body-copy">Across from the surf club. Just a little way from the beach. Easy to make part of your day.</p><address>{business.street}<br/>{business.locality}</address><p class="hours-note">Planning a visit? Give us a call for today’s hours.</p><div class="button-row"><a class="button" href={business.directions} target="_blank" rel="noopener noreferrer">Get directions <Icon name="diagonal"/></a><a class="text-link" href={`tel:${business.telephone}`}>Call the shop <Icon name="phone"/></a></div><Thread/></div>
+</section>

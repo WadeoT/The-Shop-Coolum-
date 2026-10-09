@@ -1,0 +1,6 @@
+---
+import Photo from './Photo.astro';
+import Icon from './Icon.astro';
+const { eyebrow, first, italic, text, image, alt, link, linkLabel } = Astro.props;
+---
+<section class="page-hero"><div class="page-hero-copy"><p class="eyebrow">{eyebrow}</p><h1>{first}<br/><em>{italic}</em></h1><p class="body-copy">{text}</p>{link && <a class="text-link" href={link}>{linkLabel}<Icon name="down"/></a>}</div><Photo name={image} alt={alt} eager class="page-hero-photo" parallax/></section>

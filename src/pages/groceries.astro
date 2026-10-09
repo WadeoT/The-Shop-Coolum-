@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Icon from '../components/Icon.astro';
+import Thread from '../components/Thread.astro';
+import VisitCTA from '../components/VisitCTA.astro';
+---
+<Layout title="Groceries & Little Extras" description="Everyday groceries, pantry favourites and unexpected discoveries. Explore the foodstore at The Shop @ Coolum.">
+  <PageHero eyebrow="THE FOODSTORE" first="The everyday," italic="a little better." text="A few essentials. A pantry favourite. Something you didn’t know you were looking for. Good things to take home, all close at hand." image="pantry" alt="Illustrative paper bag with bread, greens and fresh produce" link="#on-the-shelves" linkLabel="A look around the shelves"/>
+  <section id="on-the-shelves" class="grocery-section section-pad"><div><p class="eyebrow">YOUR NEIGHBOURHOOD FOODSTORE</p><h2>Fill your bag.<br/><em>Find a favourite.</em></h2><Thread/><p class="body-copy">From everyday essentials to something a little different, there’s always a reason to have a look around.</p></div><div class="grocery-list">{[{title:'Fresh & everyday',text:'Fresh produce, dairy, bread and drinks for the everyday shop.'},{title:'For the pantry',text:'Grocery staples and gourmet goods for your cupboard and your table.'},{title:'Thoughtful choices',text:'Explore organic and gluten-free groceries. Ask in store about individual products and always check the label.'}].map((item,i)=><div><span class="eyebrow">0{i+1}</span><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></section>
+  <section class="little-extras section-pad" id="little-extras"><div><p class="eyebrow">BEYOND THE SHOPPING LIST</p><h2>The little<br/><em>extras.</em></h2><p class="body-copy">Flowers, selected homewares and those lovely, unexpected finds. A little something for home, or for someone else.</p><p>Our selection changes. Pop in to see what’s here today.</p><a class="text-link" href="/visit/">Come and have a look <Icon/></a></div><div class="extras-art" aria-hidden="true"><svg viewBox="0 0 260 340" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M98 216h78l-8 97c-16 8-44 8-60 0l-10-97Zm37 0V100m2 116 36-86m-36 86-40-58M136 171c-37 7-51-3-56-31 32-1 49 9 56 31Zm15 11c26 5 45-10 45-33-28 2-42 13-45 33Z"/><path d="M135 99c-25-6-24-27-11-34-13-17-2-32 13-28 9-14 28-5 26 9 22 3 24 23 6 34 5 20-19 34-34 19Zm-40 61c-18-1-28-16-19-27-16-12-4-31 9-25 13-17 35-5 27 11 22 11 9 37-8 32m69-19c-18 1-24-15-13-24-9-16 5-28 18-20 16-11 33 7 22 20 13 15-7 33-20 23"/><circle cx="143" cy="69" r="8"/><circle cx="95" cy="134" r="6"/><circle cx="180" cy="111" r="6"/></svg><span>A SMALL, UNEXPECTED DELIGHT.</span></div></section>
+  <VisitCTA/>
+</Layout>

@@ -1,0 +1,18 @@
+---
+import { business, navigation } from '../data/site';
+import Icon from './Icon.astro';
+const current = Astro.url.pathname;
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+  <a class="brand" href="/" aria-label="The Shop at Coolum, home"><span class="brand-main">the shop<span class="brand-dot">.</span></span><span class="brand-place">@ COOLUM</span></a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    {navigation.slice(0, 5).map(link => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}>{link.label}</a>)}
+  </nav>
+  <a class="header-visit" href="/visit/">Visit us <Icon name="diagonal" /></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-navigation"><span class="menu-word">Menu</span><span class="menu-lines"><i></i><i></i></span></button>
+</header>
+<nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+  {navigation.map((link, i) => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}><span class="eyebrow">0{i+1}</span>{link.label}<Icon name="diagonal" /></a>)}
+  <div class="mobile-address"><p>{business.street}<br/>{business.locality}</p><a class="text-link" href={business.directions} target="_blank" rel="noopener noreferrer">Get directions <Icon name="diagonal" /></a></div>
+</nav>
